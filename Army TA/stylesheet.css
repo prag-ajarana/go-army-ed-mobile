@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:400,700');
+
+body {
+
+  /*background: url(Media/pink_landing.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+  color: white;
+  font-family: 'Libre Franklin', sans-serif;
+  height: 100%;
+
+}
+
+h1 {
+  color: black;
+  font-size: 16px;
+}
+
+h2 {
+  color: black;
+  font-size: 24px;
+  margin-left: 20%;
+}
+
+h2:after {
+  padding: 0 0 0 27%;
+  content: '\2807';
+  font-size: 30px;
+  }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+  background-color: black;
+  width: 60%;
+}
+
+li {
+  color: black;
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+p {
+  color: black;
+  font-size: 15px;
+}
+
+.bottomMenu {
+  overflow: hidden;
+  background-color: #057009;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.bottomMenu a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 23px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Libre Franklin', sans-serif;
+  border: 1px solid green;
+}
+
+.bottomMenu a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.bottomMenu a:hover {
+  background-color: #3e8e41
+}
+
+.nobullets {
+  list-style-type: none;
+}
+
+.overall {
+  margin-left: 10%;
+}
+
+.resize {
+    display: block;
+    margin-left: 45%;
+    margin-right: 50%;
+    width: 40px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.TA-btn {
+  padding: 8px 12px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 16px;
+  border-radius: 6px;
+  background: #057009;
+  color: white;
+  position: relative;
+  margin-top: 16px;
+  margin-bottom: 12px;
+  margin-left: 25%;
+}
+
+.TA-btn:hover {background-color: #3e8e41}
+
+.topBar {
+  overflow: hidden;
+  background-color: #057009;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 65px;
+}
