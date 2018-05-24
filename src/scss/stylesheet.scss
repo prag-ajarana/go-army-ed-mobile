@@ -1,38 +1,89 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:400,700');
+@import 'common-app.scss';
 
 body {
   color: white;
   font-family: 'Libre Franklin', sans-serif;
   height: 100%;
 
+  h1, h2, h3, h4, h5, h6, p, span, div {
+    color: #333;
+  }
 }
 
-h1 {
-  color: black;
-  font-size: 16px;
+.overall {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-h2 {
-  color: black;
-  font-size: 24px;
-  margin-left: 20%;
+.caseTitle {
+  padding: 0 20px;
+
+  p {
+    font-weight: bold;
+    font-size: 14px;
+    color: #777;
+    margin: 20px 0;
+  }
 }
 
-h2:after {
-  padding: 0 0 0 27%;
-  content: '\2807';
-  font-size: 30px;
+#root {
+  height: 100%;
+
+  h1 {
+    color: #333;
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .case {
+    padding: 0 20px;
+
+    &:last-child {
+      padding-bottom: 5rem;
+    }
+
+    :first-child {
+      h2 {
+        margin: 0;
+        margin-left: 8px;
+      }
+    }
+  }
 }
 
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-  background-color: black;
-  width: 60%;
+.tuition-assistance-header {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+
+  h1 {
+    margin-right: auto;
+    margin-left: 20px;
+  }
+}
+
+.svg-inline--fa {
+  color: #333;
+}
+
+.fa-hands-helping, .fa-user, .fa-comments, .fa-bars {
+  color: white;
+}
+
+.flex-spaced {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 li {
@@ -46,81 +97,211 @@ p {
   font-size: 15px;
 }
 
-.bottomMenu {
-  background-color: #057009;
-  bottom: 0;
-  left: 0;
-  position: fixed;
+.footerChild {
   width: 100%;
+
+  p {
+    color: white;
+    margin: 0;
+    margin-top: 0.4rem;
+    font-size: 10px;
+    font-weight: normal;
+    // letter-spacing: 0.05em;
+  }
+}
+
+#root .caseHeader {
   display: flex;
-  justify-content: center;
+  align-items: center;
 
-  a {
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 0px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: 'Libre Franklin', sans-serif;
-    border-right: 1px solid green;
-    border-top: 1px solid green;
-    width: 100%;
+  h2 {
+    margin-left: 10px;
+  }
 
-    &:last-child {
-      border-right: none;
+  &:nth-child(3) {
+    margin-bottom: calc(0.85rem + 8px);
+
+    h2 {
+      margin: 0;
+      margin-left: 10px;
     }
   }
 }
 
-.bottomMenu a.active {
-    background-color: #4CAF50;
-    color: white;
+.fa-dot-circle {
+  color: #333;
 }
 
-.bottomMenu a:hover {
-  background-color: #3e8e41
+.tableHeader {
+  color: #666;
+}
+
+.bottomMenu {
+  // background-color: #057009;
+  // background-color: #444;
+  // background-color: #fff46e;
+  background-color: #222;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #f2f2f2;
+    color: #F0C23B;
+    text-align: center;
+    padding: 10px 0px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Libre Franklin', sans-serif;
+    // border-top: 1px solid green;
+    // border-top: 1px solid #F0C23B;
+  }
+}
+
+.fa-angle-right, .fa-ellipsis-v {
+  color: #f0c23b
+}
+
+.bottomMenu a.active {
+    // background-color: #3C9F40;
+    // background-color: #555;
+    background-color: #444;
+    // background-color: #e0b22B;
+    color: white;
+    // border-top: 1px solid #2C8F30;
+    // border-top: 1px solid #F0C23B;
+}
+
+.tableRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 6px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #d4d4d4;
+  }
 }
 
 .nobullets {
   list-style-type: none;
-}
-
-.overall {
-  margin-left: 10%;
+  margin-bottom: 2.5rem;
+  margin-top: 0.5rem;
+  padding-left: 0px;
 }
 
 .resize {
-    display: block;
-    margin-left: 45%;
-    margin-right: 50%;
-    width: 40px;
-    height: auto;
-    margin-top: 10px;
+  display: block;
+  width: 32px;
+  margin-right: 10px;
 }
 
 .TA-btn {
-  padding: 8px 12px;
+  display: flex;
+  align-items: center;
   font-family: 'Libre Franklin', sans-serif;
-  font-size: 16px;
-  border-radius: 6px;
-  background: #057009;
-  color: white;
-  position: relative;
-  margin-top: 16px;
-  margin-bottom: 12px;
-  margin-left: 25%;
+  font-size: 14px;
+  color: #333;
+  margin: 12px 0;
+  text-decoration: none;
+  font-weight: bold;
+
+  span {
+    line-height: 1;
+    font-size: 14px;
+    margin-right: 8px;
+  }
+
+  .fa-angle-right {
+    font-size: 22px;
+  }
 }
 
-.TA-btn:hover {background-color: #3e8e41}
-
 .topBar {
-  overflow: hidden;
-  background-color: #057009;
-  top: 0;
-  left: 0;
-  position: fixed;
+  // background-color: #057009;
+  background-color: #333;
+  background-color: #F0C23B;
+  background-color: #f6d12e;
+  // border-bottom: 1px solid #036005;
   width: 100%;
-  height: 65px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    color: white;
+    color: #333;
+  }
+}
+
+.fa-ellpsis-v {
+  color: #f0c23b
+}
+
+#ellipsisMenu {
+  position: relative;
+  z-index: 99;
+
+  .dropdown {
+    border: 1px solid #ddd;
+    padding: 0px 24px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.05);
+    background-color: #eee;
+    position: absolute;
+    top: 26px;
+    left: 0;
+
+    $padding: 10px;
+
+    .dropdownRow {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      margin: 0;
+
+      span {
+        margin: 10px 0;
+        margin-left: 18px;
+        line-height: 1;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+
+    > ul {
+      list-style: none;
+      padding: 0 0px;
+    }
+  }
+}
+
+.hamburgerMenu {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+
+  > li {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+
+    span {
+      margin-left: 10px;
+    }
+  }
 }

@@ -1,0 +1,135 @@
+main {
+  // padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+
+  input, select {
+    width: 50%;
+    border-radius: 3px;
+    outline-style: none;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.05);
+    padding: 6px 16px;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+    background-color:transparent;
+  }
+
+  select {
+    padding: 6px 14px;
+    background-color: #eee;
+    width: 70%;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+  }
+}
+
+.commonApp {
+  padding: 0 20px;
+}
+
+.addressField {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.commonAppFieldWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: relative;
+  margin: 15px 0;
+
+  label {
+    font-size: 14px;
+    color: #999;
+    position: absolute;
+    bottom: 7px;
+    left: 16px;
+    transition: 0.1s all ease-in-out;
+  }
+
+  input:focus + label {
+    bottom: 34px;
+    left: 0;
+    font-size: 12px;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.noFloat {
+  margin-top: 26px;
+
+  label {
+    font-size: 12px;
+    bottom: 38px;
+    left: 0;
+  }
+}
+
+#zipCode {
+  width: 65px;
+}
+
+.phoneField {
+  width: 125px;
+}
+
+.commonAppHeader {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  h1 {
+    margin: 2rem 0;
+  }
+}
+
+#ellipsisMenu .dropdown.common-app {
+  right: 0;
+  left: initial;
+}
+
+.tableOfContents {
+  padding: 50px 20px 80px 20px;
+}
+
+.tocSection {
+  display: flex;
+  align-items: center;
+
+  .fa-dot-circle {
+    margin-left: -16px;
+  }
+
+  p {
+    margin-left: 10px;
+  }
+}
+
+.saveBtn {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  background-color: hsla(210, 75%, 50%, 1);
+  color: white;
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.commonFields {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewAndSubmit {
+  border-top: 1px solid #ccc;
+}
