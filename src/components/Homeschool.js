@@ -32,7 +32,7 @@ const TaMenu = () => (
   </div>
 )
 
-class Training extends React.Component {
+class Homeschool extends React.Component {
   constructor() {
     super()
 
@@ -53,7 +53,7 @@ class Training extends React.Component {
     return (
       <main className="commonApp">
         <header className="commonAppHeader">
-          <h1>Training</h1>
+          <h1>Home School and Degree Plan</h1>
 
           <div id="ellipsisMenu" onClick={this.taMenuClickHandler}>
             <FontAwesomeIcon icon={ellipsis} />
@@ -65,18 +65,44 @@ class Training extends React.Component {
 
           <section className="commonAppFieldWrapper noFloat">
             <select>
-              <option>Andres</option>
-              <option>What</option>
-              <option>Goes</option>
-              <option>On</option>
-              <option>This</option>
-              <option>Page</option>
-              <option>??</option>
+              <option>Option #1</option>
+              <option>Option #2</option>
             </select>
-            <label>Help</label>
+            <label>SchoolID</label>
           </section>
 
-          <NavLink className="saveBtn" to={"/ta/priorEd"}>
+          <section className="commonAppFieldWrapper noFloat">
+            <select>
+              <option>Option #1</option>
+              <option>Option #2</option>
+            </select>
+            <label>Degree Level</label>
+          </section>
+
+          <section className="commonAppFieldWrapper noFloat">
+            <select>
+              <option>Option #1</option>
+              <option>Option #2</option>
+            </select>
+            <label>Degree Type</label>
+          </section>
+
+          <section className="commonAppFieldWrapper noFloat">
+            <select>
+              <option>Option #1</option>
+              <option>Option #2</option>
+            </select>
+            <label>Degree Plan</label>
+          </section>
+
+          <section className="commonAppFieldWrapper noFloat">
+            <label>Degree Name</label>
+            <input type="text" name="name"
+             placeholder=""
+             size="2000"></input>
+          </section>
+
+          <NavLink className="saveBtn" to={"/ta/homeschool"}>
             <span>Save and continue</span>
           </NavLink>
 
@@ -96,8 +122,7 @@ class Training extends React.Component {
           </section>
 
           <section className="tocSection">
-            <FontAwesomeIcon icon={fancyDot} />
-            <p><strong>Training</strong></p>
+            <p>Training</p>
           </section>
 
           <section className="tocSection">
@@ -105,7 +130,8 @@ class Training extends React.Component {
           </section>
 
           <section className="tocSection">
-            <p>Home School and Degree Plan</p>
+            <FontAwesomeIcon icon={fancyDot} />
+            <p><strong>Home School and Degree Plan</strong></p>
           </section>
 
           <section className="tocSection reviewAndSubmit">
@@ -117,4 +143,4 @@ class Training extends React.Component {
   }
 }
 
-export default hot(module)(Training)
+export default hot(module)(Homeschool)

@@ -8,6 +8,8 @@ import Hamburger from './Hamburger'
 import Tests from './Tests'
 import DemographicInfo from './DemographicInfo'
 import Training from './Training'
+import PriorEducation from './PriorEducation'
+import Homeschool from './Homeschool'
 
 const App = () => (
   <BrowserRouter>
@@ -21,6 +23,9 @@ const App = () => (
       <Route exact path="/ta/tests" component={Tests}></Route>
       <Route exact path="/ta/demo" component={DemographicInfo}></Route>
       <Route exact path="/ta/training" component={Training}></Route>
+      <Route exact path="/ta/priorEd" component={PriorEducation}></Route>
+      <Route exact path="/ta/homeschool" component={Homeschool}></Route>
+
 
       <Footer />
     </div>

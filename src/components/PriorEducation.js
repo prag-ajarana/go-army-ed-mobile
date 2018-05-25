@@ -32,7 +32,7 @@ const TaMenu = () => (
   </div>
 )
 
-class Training extends React.Component {
+class PriorEducation extends React.Component {
   constructor() {
     super()
 
@@ -53,7 +53,7 @@ class Training extends React.Component {
     return (
       <main className="commonApp">
         <header className="commonAppHeader">
-          <h1>Training</h1>
+          <h1>Prior Education</h1>
 
           <div id="ellipsisMenu" onClick={this.taMenuClickHandler}>
             <FontAwesomeIcon icon={ellipsis} />
@@ -65,18 +65,52 @@ class Training extends React.Component {
 
           <section className="commonAppFieldWrapper noFloat">
             <select>
-              <option>Andres</option>
-              <option>What</option>
-              <option>Goes</option>
-              <option>On</option>
-              <option>This</option>
-              <option>Page</option>
-              <option>??</option>
+              <option>Some High School</option>
+              <option>High School</option>
+              <option>Some College</option>
+              <option>Bachelors</option>
+              <option>Masters</option>
+              <option>PhD</option>
             </select>
-            <label>Help</label>
+            <label>Highest Level of Education Completed</label>
           </section>
 
-          <NavLink className="saveBtn" to={"/ta/priorEd"}>
+          <section className="commonAppFieldWrapper noFloat">
+            <label>High School</label>
+            <input type="text" name="name"
+             placeholder=""
+             size="2000"></input>
+          </section>
+
+          <section className="commonAppFieldWrapper noFloat">
+            <label>High School Grad or GED Date</label>
+            <input id="date" type="date"></input>
+          </section>
+
+          <section className="commonAppFieldWrapper noFloat">
+            <select>
+              <option>No</option>
+              <option>Yes</option>
+            </select>
+            <label>Prior Higher Ed Experience</label>
+          </section>
+
+          <section className="commonAppFieldWrapper noFloat">
+            <label>Approx. Number of College Credits</label>
+            <input type="text" name="name"
+             placeholder=""
+             size="2000"></input>
+          </section>
+
+          <section className="commonAppFieldWrapper noFloat">
+            <select>
+              <option></option>
+              <option></option>
+            </select>
+            <label>Prior Colleges Attended (School ID)</label>
+          </section>
+
+          <NavLink className="saveBtn" to={"/ta/homeschool"}>
             <span>Save and continue</span>
           </NavLink>
 
@@ -96,12 +130,12 @@ class Training extends React.Component {
           </section>
 
           <section className="tocSection">
-            <FontAwesomeIcon icon={fancyDot} />
-            <p><strong>Training</strong></p>
+            <p>Training</p>
           </section>
 
           <section className="tocSection">
-            <p>Prior Education</p>
+            <FontAwesomeIcon icon={fancyDot} />
+            <p><strong>Prior Education</strong></p>
           </section>
 
           <section className="tocSection">
@@ -117,4 +151,4 @@ class Training extends React.Component {
   }
 }
 
-export default hot(module)(Training)
+export default hot(module)(PriorEducation)
