@@ -8,6 +8,7 @@ import save from '@fortawesome/fontawesome-free-solid/faSave'
 import edit from '@fortawesome/fontawesome-free-solid/faEdit'
 import fancyDot from '@fortawesome/fontawesome-free-solid/faDotCircle'
 import { hot } from 'react-hot-loader'
+import { NavLink } from 'react-router-dom';
 
 
 const TaMenu = () => (
@@ -138,7 +139,7 @@ class CommonApplication extends React.Component {
             <option value="CD">Congo, the Democratic Republic of the</option>
             <option value="CK">Cook Islands</option>
             <option value="CR">Costa Rica</option>
-            <option value="CI">Côte d'Ivoire</option>
+            <option value="CI">Côte d Ivoire</option>
             <option value="HR">Croatia</option>
             <option value="CU">Cuba</option>
             <option value="CW">Curaçao</option>
@@ -201,11 +202,11 @@ class CommonApplication extends React.Component {
             <option value="KZ">Kazakhstan</option>
             <option value="KE">Kenya</option>
             <option value="KI">Kiribati</option>
-            <option value="KP">Korea, Democratic People's Republic of</option>
+            <option value="KP">Korea, Democratic Peoples Republic of</option>
             <option value="KR">Korea, Republic of</option>
             <option value="KW">Kuwait</option>
             <option value="KG">Kyrgyzstan</option>
-            <option value="LA">Lao People's Democratic Republic</option>
+            <option value="LA">Lao Peoples Democratic Republic</option>
             <option value="LV">Latvia</option>
             <option value="LB">Lebanon</option>
             <option value="LS">Lesotho</option>
@@ -366,7 +367,10 @@ class CommonApplication extends React.Component {
             <label>Referral method</label>
           </section>
 
-          <button className="saveBtn">Save and continue</button>
+          <NavLink className="saveBtn" to={"/ta/tests"}>
+            <span>Save and continue</span>
+          </NavLink>
+
         </article>
 
         <nav className="tableOfContents">

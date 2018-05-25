@@ -123,11 +123,34 @@ main {
   color: white;
   margin-top: 25px;
   font-size: 14px;
+  text-decoration: none;
+  display: flex;
+
+  span {
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+  }
 }
 
 .commonFields {
   display: flex;
   flex-direction: column;
+}
+
+.justification {
+  margin-top: 26px;
+
+  label {
+    font-size: 12px;
+    bottom: 90px;
+    left: 0;
+  }
+}
+
+.justificationBox {
+  height: 5em;
+  width: 18em;;
 }
 
 .reviewAndSubmit {
