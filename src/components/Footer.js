@@ -6,10 +6,6 @@ import user from '@fortawesome/fontawesome-free-solid/faUser'
 import bars from '@fortawesome/fontawesome-free-solid/faBars'
 import { NavLink } from 'react-router-dom';
 
-const stuff = (stuff) => {
-  console.log(stuff)
-}
-
 const Footer = () => (
   <footer className="bottomMenu">
     <NavLink to={"/ta"} className="footerChild" activeClassName={"active"}>
@@ -19,7 +15,7 @@ const Footer = () => (
 
     <NavLink exact to={"/counseling"} className="footerChild" activeClassName={"active"}>
       <FontAwesomeIcon icon={comments} />
-      <p>Counseling</p>
+      <p>Assistance</p>
     </NavLink>
 
     <NavLink exact to={"/account"} className="footerChild" activeClassName={"active"}>

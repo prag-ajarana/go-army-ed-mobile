@@ -1,32 +1,22 @@
 import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Route, Switch } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
-import TaStatusPage from './TaStatusPage'
-import CommonApplication from './CommonApplication'
+import TuitionAssistance from './TuitionAssistance'
 import Hamburger from './Hamburger'
-import Tests from './Tests'
-import DemographicInfo from './DemographicInfo'
-import Training from './Training'
-import PriorEducation from './PriorEducation'
-import Homeschool from './Homeschool'
+import '../scss/stylesheet.scss'
+import 'normalize.css'
 
 const App = () => (
   <BrowserRouter>
     <div className="overall">
       <Header />
 
-      <Route exact path="/ta" component={TaStatusPage}></Route>
-      <Route exact path="/ta/common-app" component={CommonApplication}></Route>
-      <Route exact path="/more" component={Hamburger} />
-
-      <Route exact path="/ta/tests" component={Tests}></Route>
-      <Route exact path="/ta/demo" component={DemographicInfo}></Route>
-      <Route exact path="/ta/training" component={Training}></Route>
-      <Route exact path="/ta/priorEd" component={PriorEducation}></Route>
-      <Route exact path="/ta/homeschool" component={Homeschool}></Route>
-
-
+      <Switch>
+        <Route path="/ta" component={TuitionAssistance}></Route>
+        <Route exact path="/more" component={Hamburger} />
+      </Switch>
+      
       <Footer />
     </div>
   </BrowserRouter>

@@ -11,7 +11,14 @@ module.exports = {
   devServer: {
     contentBase: './src',
     hot: true,
-    historyApiFallback: true,
+    historyApiFallback: {
+      rewrites: [
+        {
+          from: /favicon-96x96.png/,
+          to: '/assets/favicon-96x96.png'
+        }
+      ]
+    },
     open: true
   },
   output: {

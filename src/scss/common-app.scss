@@ -1,5 +1,4 @@
 main {
-  // padding: 0 20px;
   display: flex;
   flex-direction: column;
 
@@ -29,6 +28,21 @@ main {
 
 .commonApp {
   padding: 0 20px;
+}
+
+.activeCommonNav::before, .tps::before, .twitter::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.activeCommonNav::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f192";
+  color: red;
 }
 
 .addressField {

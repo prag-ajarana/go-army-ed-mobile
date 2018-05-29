@@ -8,7 +8,8 @@ import save from '@fortawesome/fontawesome-free-solid/faSave'
 import edit from '@fortawesome/fontawesome-free-solid/faEdit'
 import fancyDot from '@fortawesome/fontawesome-free-solid/faDotCircle'
 import { hot } from 'react-hot-loader'
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
+import scrollToTop from './scrollToTop'
 
 const TaMenu = () => (
   <div className="dropdown common-app">
@@ -35,6 +36,8 @@ const TaMenu = () => (
 class Tests extends React.Component {
   constructor() {
     super()
+
+    scrollToTop()
 
     this.taMenuClickHandler = this.taMenuClickHandler.bind(this)
 
@@ -136,37 +139,6 @@ class Tests extends React.Component {
           </NavLink>
 
         </article>
-
-        <nav className="tableOfContents">
-          <section className="tocSection">
-            <p>Contact Information</p>
-          </section>
-
-          <section className="tocSection">
-            <FontAwesomeIcon icon={fancyDot} />
-            <p><strong>Tests</strong></p>
-          </section>
-
-          <section className="tocSection">
-            <p>Demographic Information</p>
-          </section>
-
-          <section className="tocSection">
-            <p>Training</p>
-          </section>
-
-          <section className="tocSection">
-            <p>Prior Education</p>
-          </section>
-
-          <section className="tocSection">
-            <p>Home School and Degree Plan</p>
-          </section>
-
-          <section className="tocSection reviewAndSubmit">
-            <p>Review and Submit</p>
-          </section>
-        </nav>
       </main>
     )
   }

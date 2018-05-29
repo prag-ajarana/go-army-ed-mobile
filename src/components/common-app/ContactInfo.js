@@ -1,50 +1,26 @@
 import React from 'react'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import ellipsis from '@fortawesome/fontawesome-free-solid/faEllipsisV'
-import printer from '@fortawesome/fontawesome-free-solid/faPrint'
-import refresh from '@fortawesome/fontawesome-free-solid/faSync'
-import trash from '@fortawesome/fontawesome-free-solid/faTrashAlt'
-import save from '@fortawesome/fontawesome-free-solid/faSave'
-import edit from '@fortawesome/fontawesome-free-solid/faEdit'
 import fancyDot from '@fortawesome/fontawesome-free-solid/faDotCircle'
 import { hot } from 'react-hot-loader'
 import { NavLink } from 'react-router-dom';
+import CommonAppTaMenu from './CommonAppTaMenu'
+import scrollToTop from './scrollToTop'
 
-
-const TaMenu = () => (
-  <div className="dropdown common-app">
-    <ul>
-      <li className="dropdownRow">
-        <FontAwesomeIcon icon={refresh} /> <span>Refresh</span>
-      </li>
-      <li className="dropdownRow">
-        <FontAwesomeIcon icon={printer} /> <span>Print</span>
-      </li>
-      <li className="dropdownRow">
-        <FontAwesomeIcon icon={trash} /> <span>Trash</span>
-      </li>
-      <li className="dropdownRow">
-        <FontAwesomeIcon icon={save} /> <span>Save</span>
-      </li>
-      <li className="dropdownRow">
-        <FontAwesomeIcon icon={edit} /> <span>Edit</span>
-      </li>
-    </ul>
-  </div>
-)
-
-class CommonApplication extends React.Component {
+class ContactInfo extends React.Component {
   constructor() {
     super()
 
-    this.taMenuClickHandler = this.taMenuClickHandler.bind(this)
+    scrollToTop()
+    
+    this.CommonAppTaMenuClickHandler = this.CommonAppTaMenuClickHandler.bind(this)
 
     this.state = {
       dropDownActivated: false
     }
   }
 
-  taMenuClickHandler() {
+  CommonAppTaMenuClickHandler() {
     this.setState({
       dropDownActivated: !this.state.dropDownActivated
     })
@@ -56,9 +32,9 @@ class CommonApplication extends React.Component {
         <header className="commonAppHeader">
           <h1>Contact Information</h1>
 
-          <div id="ellipsisMenu" onClick={this.taMenuClickHandler}>
+          <div id="ellipsisMenu" onClick={this.CommonAppTaMenuClickHandler}>
             <FontAwesomeIcon icon={ellipsis} />
-            {(this.state.dropDownActivated) ? <TaMenu /> : ''}
+            {(this.state.dropDownActivated) ? <CommonAppTaMenu /> : ''}
           </div>
         </header>
 
@@ -372,40 +348,9 @@ class CommonApplication extends React.Component {
           </NavLink>
 
         </article>
-
-        <nav className="tableOfContents">
-          <section className="tocSection">
-            <FontAwesomeIcon icon={fancyDot} />
-            <p><strong>Contact Information</strong></p>
-          </section>
-
-          <section className="tocSection">
-            <p>Tests</p>
-          </section>
-
-          <section className="tocSection">
-            <p>Demographic Information</p>
-          </section>
-
-          <section className="tocSection">
-            <p>Training</p>
-          </section>
-
-          <section className="tocSection">
-            <p>Prior Education</p>
-          </section>
-
-          <section className="tocSection">
-            <p>Home School and Degree Plan</p>
-          </section>
-
-          <section className="tocSection reviewAndSubmit">
-            <p>Review and Submit</p>
-          </section>
-        </nav>
       </main>
     )
   }
 }
 
-export default hot(module)(CommonApplication)
+export default hot(module)(ContactInfo)

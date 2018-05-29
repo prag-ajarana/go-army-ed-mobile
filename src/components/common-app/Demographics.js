@@ -1,14 +1,9 @@
 import React from 'react'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import ellipsis from '@fortawesome/fontawesome-free-solid/faEllipsisV'
-import printer from '@fortawesome/fontawesome-free-solid/faPrint'
-import refresh from '@fortawesome/fontawesome-free-solid/faSync'
-import trash from '@fortawesome/fontawesome-free-solid/faTrashAlt'
-import save from '@fortawesome/fontawesome-free-solid/faSave'
-import edit from '@fortawesome/fontawesome-free-solid/faEdit'
-import fancyDot from '@fortawesome/fontawesome-free-solid/faDotCircle'
 import { hot } from 'react-hot-loader'
 import { NavLink } from 'react-router-dom';
+import scrollToTop from './scrollToTop'
 
 const TaMenu = () => (
   <div className="dropdown common-app">
@@ -32,10 +27,12 @@ const TaMenu = () => (
   </div>
 )
 
-class DemographicInfo extends React.Component {
-  constructor() {
-    super()
+class Demographics extends React.Component {
+  constructor(props) {
+    super(props)
 
+    scrollToTop()
+    
     this.taMenuClickHandler = this.taMenuClickHandler.bind(this)
 
     this.state = {
@@ -53,7 +50,7 @@ class DemographicInfo extends React.Component {
     return (
       <main className="commonApp">
         <header className="commonAppHeader">
-          <h1>Demographic Info</h1>
+          <h1>Demographics</h1>
 
           <div id="ellipsisMenu" onClick={this.taMenuClickHandler}>
             <FontAwesomeIcon icon={ellipsis} />
@@ -143,40 +140,9 @@ class DemographicInfo extends React.Component {
           </NavLink>
 
         </article>
-
-        <nav className="tableOfContents">
-          <section className="tocSection">
-            <p>Contact Information</p>
-          </section>
-
-          <section className="tocSection">
-            <p>Tests</p>
-          </section>
-
-          <section className="tocSection">
-            <FontAwesomeIcon icon={fancyDot} />
-            <p><strong>Demographic Information</strong></p>
-          </section>
-
-          <section className="tocSection">
-            <p>Training</p>
-          </section>
-
-          <section className="tocSection">
-            <p>Prior Education</p>
-          </section>
-
-          <section className="tocSection">
-            <p>Home School and Degree Plan</p>
-          </section>
-
-          <section className="tocSection reviewAndSubmit">
-            <p>Review and Submit</p>
-          </section>
-        </nav>
       </main>
     )
   }
 }
 
-export default hot(module)(DemographicInfo)
+export default hot(module)(Demographics)
