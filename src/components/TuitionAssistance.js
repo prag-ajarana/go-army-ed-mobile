@@ -6,7 +6,6 @@ import CommonApp from './common-app/CommonApp'
 import CoursePlanner from './course-planner/index'
 
 const TuitionAssistance = (props) => {
-  
   return (
     <div className="overall">
       <Switch>
