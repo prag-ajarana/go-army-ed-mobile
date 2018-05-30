@@ -16,7 +16,7 @@ const App = () => (
         <Route path="/ta" component={TuitionAssistance}></Route>
         <Route exact path="/more" component={Hamburger} />
       </Switch>
-      
+
       <Footer />
     </div>
   </BrowserRouter>

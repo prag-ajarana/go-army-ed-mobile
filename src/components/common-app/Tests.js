@@ -129,9 +129,9 @@ class Tests extends React.Component {
 
           <section className="commonAppFieldWrapper justification">
             <label>Student Enrollment Justification</label>
-            <input type="text" name="name"
+            <textarea type="text" name="name"
              placeholder=""
-             size="2000" className="justificationBox"></input>
+             size="2000" className="justificationBox"></textarea>
           </section>
 
           <NavLink className="saveBtn" to={"/ta/demo"}>

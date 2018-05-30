@@ -11,6 +11,7 @@ import Navigation from './Navigation'
 
 const CommonApp = (props) => {
   let currentPath = props.match.path;
+  
 
   return (
     <div className="overall">

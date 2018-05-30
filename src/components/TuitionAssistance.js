@@ -1,22 +1,18 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import TaStatusPage from './TaStatusPage'
+import { Route, Switch } from 'react-router-dom'
+import TaStatus from './TaStatus'
 import CommonApp from './common-app/CommonApp'
-import ContactInfo from './common-app/ContactInfo'
-import Tests from './common-app/Tests'
-import Demographics from './common-app/Demographics'
-import Training from './common-app/Training'
-import PriorEducation from './common-app/PriorEducation'
-import Homeschool from './common-app/Homeschool'
+import CoursePlanner from './course-planner/index'
 
 const TuitionAssistance = (props) => {
+  
   return (
     <div className="overall">
       <Switch>
-        <Route exact path="/ta" component={TaStatusPage}></Route>
-
-        <Route path={`${props.match.path}/common-app`} component={CommonApp}></Route>
+        <Route exact path={`/ta`} component={TaStatus}></Route>
+        <Route path={`/ta/common-app`} component={CommonApp}></Route>
+        <Route path={`/ta/course-planner`} component={CoursePlanner}></Route>
       </Switch>
     </div>
   )

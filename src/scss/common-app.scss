@@ -42,12 +42,16 @@ main {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f192";
-  color: red;
+  color: green;
 }
 
 .addressField {
   width: 100%;
   box-sizing: border-box;
+}
+
+.studentType {
+  margin: 10px 0;
 }
 
 .commonAppFieldWrapper {

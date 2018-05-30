@@ -276,7 +276,9 @@ p {
       border-bottom: 1px solid #ccc;
       margin: 0;
 
-      span {
+      a {
+        text-decoration: none;
+        color: #333;
         margin: 12px 0;
         line-height: 1;
       }
@@ -290,7 +292,7 @@ p {
     > ul {
       list-style: none;
       padding: 0 0px;
-      margin: 12px 0;
+      margin: 8px 0;
     }
   }
 }
