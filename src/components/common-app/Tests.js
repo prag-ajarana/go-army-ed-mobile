@@ -67,11 +67,11 @@ class Tests extends React.Component {
         <article className="commonFields">
 
           <section className="commonAppFieldWrapper noFloat">
+            <label>Taken SAT</label>
             <select>
               <option>No</option>
               <option>Yes</option>
             </select>
-            <label>Taken SAT</label>
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
@@ -80,11 +80,11 @@ class Tests extends React.Component {
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
+            <label>Taken ACT</label>
             <select>
               <option>No</option>
               <option>Yes</option>
             </select>
-            <label>Taken ACT</label>
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
@@ -93,38 +93,39 @@ class Tests extends React.Component {
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
-            <select>
-              <option>No</option>
-              <option>Yes</option>
-            </select>
             <label>Taken Distance Learning or Online Course</label>
-          </section>
 
-          <section className="commonAppFieldWrapper noFloat">
             <select>
               <option>No</option>
               <option>Yes</option>
             </select>
+          </section>
+
+          <section className="commonAppFieldWrapper noFloat">
             <label>Ever Enrolled in Degree Program at Desired School</label>
+            <select>
+              <option>No</option>
+              <option>Yes</option>
+            </select>
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
-            <label>Date Start Enrolled Degree Program at Desired School</label>
+            <label>Degree Program Start Date</label>
             <input id="date" type="date"></input>
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
-            <label>Date End Enrolled Degree Program at Desired School</label>
+            <label>Degree Program End Date</label>
             <input id="date" type="date"></input>
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
+            <label>When Enroll in Desired School</label>
             <select>
               <option>Option #1</option>
               <option>Option #2</option>
               <option>Option #3</option>
             </select>
-            <label>When Enroll in Desired School</label>
           </section>
 
           <section className="commonAppFieldWrapper justification">

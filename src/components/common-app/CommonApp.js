@@ -6,15 +6,14 @@ import Tests from './Tests'
 import Demographics from './Demographics'
 import Training from './Training'
 import PriorEducation from './PriorEducation'
-import Homeschool from './Homeschool'
+import DegreePlan from './DegreePlan'
 import Navigation from './Navigation'
 
 const CommonApp = (props) => {
   let currentPath = props.match.path;
-  
 
   return (
-    <div className="overall">
+    <div>
       <Switch>
         <Route exact path={`${currentPath}/contact-info`} component={ContactInfo}></Route>
 
@@ -26,7 +25,7 @@ const CommonApp = (props) => {
 
         <Route exact path={`${currentPath}/prior-education`} component={PriorEducation}></Route>
 
-        <Route exact path={`${currentPath}/degree-plan`} component={Homeschool}></Route>
+        <Route exact path={`${currentPath}/degree-plan`} component={DegreePlan}></Route>
       </Switch>
 
       <Navigation

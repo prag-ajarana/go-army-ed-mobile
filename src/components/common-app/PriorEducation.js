@@ -67,6 +67,7 @@ class PriorEducation extends React.Component {
         <article className="commonFields">
 
           <section className="commonAppFieldWrapper noFloat">
+            <label>Highest Level of Education Completed</label>
             <select>
               <option>Some High School</option>
               <option>High School</option>
@@ -75,7 +76,6 @@ class PriorEducation extends React.Component {
               <option>Masters</option>
               <option>PhD</option>
             </select>
-            <label>Highest Level of Education Completed</label>
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
@@ -91,11 +91,11 @@ class PriorEducation extends React.Component {
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
+            <label>Prior Higher Ed Experience</label>
             <select>
               <option>No</option>
               <option>Yes</option>
             </select>
-            <label>Prior Higher Ed Experience</label>
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
@@ -106,11 +106,11 @@ class PriorEducation extends React.Component {
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
+            <label>Prior Colleges Attended (School ID)</label>
             <select>
               <option></option>
               <option></option>
             </select>
-            <label>Prior Colleges Attended (School ID)</label>
           </section>
 
           <NavLink className="saveBtn" to={"/ta/homeschool"}>

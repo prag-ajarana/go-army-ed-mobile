@@ -31,6 +31,14 @@ a {
     color: #777;
     margin: 20px 0;
   }
+
+  .statusUpdate {
+    // font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 20px;
+    color: #333;
+  }
 }
 
 #root {
@@ -142,9 +150,6 @@ p {
 }
 
 .bottomMenu {
-  // background-color: #057009;
-  // background-color: #444;
-  // background-color: #fff46e;
   background-color: #222;
   width: 100%;
   display: flex;
@@ -168,8 +173,6 @@ p {
     font-size: 16px;
     font-weight: 400;
     font-family: 'Libre Franklin', sans-serif;
-    // border-top: 1px solid green;
-    // border-top: 1px solid #F0C23B;
   }
 }
 
@@ -178,13 +181,8 @@ p {
 }
 
 .bottomMenu a.active {
-    // background-color: #3C9F40;
-    // background-color: #555;
     background-color: #444;
-    // background-color: #e0b22B;
     color: white;
-    // border-top: 1px solid #2C8F30;
-    // border-top: 1px solid #F0C23B;
 }
 
 .tableRow {
@@ -232,12 +230,14 @@ p {
   }
 }
 
+textarea {
+  border-radius: 4px;
+}
+
 .topBar {
-  // background-color: #057009;
   background-color: #333;
   background-color: #F0C23B;
   background-color: #f6d12e;
-  // border-bottom: 1px solid #036005;
   width: 100%;
   height: 58px;
   display: flex;
@@ -258,9 +258,18 @@ p {
   position: relative;
   z-index: 99;
 
+  #statusDropdown {
+    padding: 0 10px;
+
+    .dropdownRow {
+      margin: 0;
+      padding: 4px 6px;
+    }
+  }
+
   .dropdown {
     border: 1px solid #ddd;
-    padding: 0px 20px;
+    padding: 0px 30px;
     border-radius: 3px;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.05);
     background-color: #eee;
@@ -275,7 +284,10 @@ p {
       display: flex;
       align-items: center;
       border-bottom: 1px solid #ccc;
-      margin: 0;
+      padding: 10px 22px;
+      // margin: 0px -10px;
+      margin-left: -10px;
+      margin-right: -10px;
 
       a {
         text-decoration: none;
@@ -285,8 +297,11 @@ p {
       }
 
       &:last-child {
-        padding-bottom: 0;
         border-bottom: none;
+      }
+
+      span {
+        margin-left: 22px;
       }
     }
 
@@ -307,9 +322,152 @@ p {
     margin-top: 30px;
     margin-bottom: 10px;
     padding: 0 20px;
+    text-align: center;
 
     span {
       margin-left: 10px;
     }
   }
+}
+
+$sidePadding: 18px;
+
+.commonForm {
+  padding: 0 $sidePadding;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+
+  h1 {
+    margin-top: 22px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h2, h3 {
+    margin-bottom: 4px;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  p {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  input {
+    box-sizing: border-box;
+    padding: 10px 12px;
+  }
+
+  .fieldLabel {
+    display: inline-block;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .fullWidth {
+    width: 100%;
+  }
+
+  .shortWidth {
+    width: 35%;
+  }
+}
+
+#searchSection {
+  padding: 0 $sidePadding;
+  padding-bottom: 28px;
+  margin-top: 40px;
+  border-bottom: 1px solid #ddd;
+  margin-left: -$sidePadding;
+  margin-right: -$sidePadding;
+}
+
+$boxShadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+
+#searchResultsSection, .requestTaForm {
+  a {
+    display: inline-block;
+    text-align: center;
+    background-color: #4979c1;
+    border: 1px solid transparent;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 15px;
+    box-shadow: $boxShadow;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .schoolIcon {
+    color: #999
+  }
+
+  section {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 25px 0;
+
+    label {
+      color: #999;
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    span {
+      font-size: 14px;
+    }
+  }
+
+  article {
+    padding-bottom: 4rem;
+
+    &:last-child {
+      padding-bottom: 8rem;
+    }
+  }
+
+  .longSection {
+    flex-direction: column;
+  }
+
+  .titleSection {
+    flex-direction: row;
+
+    label {
+      color: #333;
+      margin-left: 10px;
+    }
+  }
+
+  .cancel {
+    background-color: hsl(15, 100%, 43%);
+    margin-top: 10px;
+  }
+}
+
+#enrollSection {
+  label {
+    margin-left: 0;
+  }
+}
+
+#cost {
+  background-color: #f4f4f4;
+  margin: 0 -$sidePadding;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px $sidePadding;
 }

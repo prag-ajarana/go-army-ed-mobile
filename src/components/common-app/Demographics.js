@@ -32,7 +32,7 @@ class Demographics extends React.Component {
     super(props)
 
     scrollToTop()
-    
+
     this.taMenuClickHandler = this.taMenuClickHandler.bind(this)
 
     this.state = {
@@ -61,14 +61,15 @@ class Demographics extends React.Component {
         <article className="commonFields">
 
           <section className="commonAppFieldWrapper noFloat">
+            <label>Hispanic/Latino</label>
             <select>
               <option>No</option>
               <option>Yes</option>
             </select>
-            <label>Hispanic/Latino</label>
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
+            <label>Race</label>
             <select>
               <option>American Indian/Alaskan Native</option>
               <option>Asian</option>
@@ -76,7 +77,6 @@ class Demographics extends React.Component {
               <option>Native Hawaiian/Pacific Islander</option>
               <option>White/Caucasian</option>
             </select>
-            <label>Race</label>
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
@@ -85,54 +85,54 @@ class Demographics extends React.Component {
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
+            <label>Gender</label>
             <select>
               <option>Male</option>
               <option>Female</option>
               <option>Other</option>
             </select>
-            <label>Gender</label>
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
+            <label>Disability Type</label>
             <select>
               <option>Option #1</option>
               <option>Option #2</option>
             </select>
-            <label>Disability Type</label>
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
+            <label>Primary Language</label>
             <select>
               <option>English</option>
               <option>Spanish</option>
               <option>Etc.</option>
             </select>
-            <label>Primary Language</label>
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
+            <label>English Primary Language</label>
             <select>
               <option>Yes</option>
               <option>No</option>
             </select>
-            <label>English Primary Language</label>
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
+            <label>English as Foreign Language Test</label>
             <select>
               <option>Option #1</option>
               <option>Option #2</option>
             </select>
-            <label>English as Foreign Language Test</label>
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
+            <label>Parents Level of Education</label>
             <select>
               <option>Option #1</option>
               <option>Option #2</option>
               <option>Option #3</option>
             </select>
-            <label>Parents Level of Education</label>
           </section>
 
           <NavLink className="saveBtn" to={"/ta/training"}>

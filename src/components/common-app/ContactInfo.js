@@ -12,7 +12,7 @@ class ContactInfo extends React.Component {
     super()
 
     scrollToTop()
-    
+
     this.CommonAppTaMenuClickHandler = this.CommonAppTaMenuClickHandler.bind(this)
 
     this.state = {
@@ -40,26 +40,27 @@ class ContactInfo extends React.Component {
 
         <article className="commonFields">
           <section className="commonAppFieldWrapper">
-            <input />
             <label>First Name</label>
-          </section>
-
-          <section className="commonAppFieldWrapper">
             <input />
+          </section>
+
+          <section className="commonAppFieldWrapper">
             <label>Last Name</label>
+            <input />
           </section>
 
           <section className="commonAppFieldWrapper">
-            <input className="addressField" />
             <label>Address line 1</label>
+            <input className="addressField" />
           </section>
 
           <section className="commonAppFieldWrapper">
-            <input className="addressField" />
             <label>Address line 2</label>
+            <input className="addressField" />
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
+            <label>Country</label>
             <select>
             <option value="AF">Afghanistan</option>
             <option value="AX">Åland Islands</option>
@@ -311,36 +312,35 @@ class ContactInfo extends React.Component {
             <option value="ZM">Zambia</option>
             <option value="ZW">Zimbabwe</option>
             </select>
-            <label>Country</label>
           </section>
 
           <section className="commonAppFieldWrapper">
-            <input id="zipCode" />
             <label>Zip code</label>
+            <input id="zipCode" />
           </section>
 
           <section className="commonAppFieldWrapper">
-            <input className="phoneField" />
             <label>Primary phone</label>
-          </section>
-
-          <section className="commonAppFieldWrapper">
             <input className="phoneField" />
-            <label>Alternate phone</label>
           </section>
 
           <section className="commonAppFieldWrapper">
-            <input />
+            <label>Alternate phone</label>
+            <input className="phoneField" />
+          </section>
+
+          <section className="commonAppFieldWrapper">
             <label>DSN</label>
+            <input />
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
+            <label>Referral method</label>
             <select>
               <option>Referral method #1</option>
               <option>Referral method #2</option>
               <option>Referral method #3</option>
             </select>
-            <label>Referral method</label>
           </section>
 
           <NavLink className="saveBtn" to={"/ta/tests"}>

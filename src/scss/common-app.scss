@@ -46,7 +46,7 @@ main {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f192";
-  color: green;
+  color: #999;
 }
 
 .addressField {
@@ -62,21 +62,22 @@ main {
   display: flex;
   flex-direction: column;
   padding: 0;
-  position: relative;
-  margin: 15px 0;
+  // position: relative;
+  margin: 12px 0;
 
   label {
-    font-size: 14px;
+    font-size: 12px;
     color: #999;
-    position: absolute;
-    bottom: 7px;
-    left: 16px;
+    // position: absolute;
+    // bottom: 7px;
+    // left: 16px;
     transition: 0.1s all ease-in-out;
+    margin-bottom: 6px;
   }
 
   input:focus + label {
-    bottom: 34px;
-    left: 0;
+    // bottom: 34px;
+    // left: 0;
     font-size: 12px;
   }
 
@@ -85,15 +86,15 @@ main {
   }
 }
 
-.noFloat {
-  margin-top: 26px;
-
-  label {
-    font-size: 12px;
-    bottom: 38px;
-    left: 0;
-  }
-}
+// .noFloat {
+//   // margin-top: 26px;
+//
+//   label {
+//     font-size: 12px;
+//     bottom: 38px;
+//     left: 0;
+//   }
+// }
 
 #zipCode {
   width: 65px;
@@ -131,6 +132,15 @@ main {
   .fa-dot-circle {
     margin-left: -16px;
   }
+
+  p {
+    margin-left: 26px;
+  }
+}
+
+.activeCommonNav {
+  font-weight: bold;
+  // margin-left: 16px;
 
   p {
     margin-left: 10px;

@@ -15,17 +15,17 @@ const navOptions = [
     label: 'Demographics',
     path: 'demographics'
   },
-  {
-    label: 'Training',
-    path: 'training'
-  },
+  // {
+  //   label: 'Training',
+  //   path: 'training'
+  // },
   {
     label: 'Prior Education',
     path: 'prior-education'
   },
   {
     label: 'Home School and Degree Plan',
-    path: 'home-school-and-degree-plan'
+    path: 'degree-plan'
   },
   {
     label: 'Review and Submit',

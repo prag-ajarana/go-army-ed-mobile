@@ -5,14 +5,14 @@ import ellipsis from '@fortawesome/fontawesome-free-solid/faEllipsisV'
 import fileAlt from '@fortawesome/fontawesome-free-solid/faFileAlt'
 import angleRight from '@fortawesome/fontawesome-free-solid/faAngleRight'
 import { NavLink, Switch, Route } from 'react-router-dom'
-import TaStatusNewStudent from './TaStatusNewStudent'
-import TaStatusContinuingStudent from './TaStatusContinuingStudent'
+// import TaStatusNewStudent from './TaStatusNewStudent'
+// import TaStatusContinuingStudent from './TaStatusContinuingStudent'
 import CommonApp from './common-app/CommonApp'
 
 const TaMenu = (props) => {
 
   return (
-    <div className="dropdown">
+    <div id="statusDropdown" className="dropdown">
       <ul>
         <li className="dropdownRow">
           <span className="studentType" onClick={() => props.taMenuChangeStudentType('new')}>New Student</span>
@@ -92,7 +92,7 @@ const NewStudent = (props) => {
             path='/ta/common-app' /> : ''}
         </div>
 
-        <h1>TA(new)</h1>
+        <h1>TA</h1>
         <NavLink className="TA-btn" to='/ta/common-app/contact-info'>
           <span>Request TA</span>
           <FontAwesomeIcon icon={angleRight} />
@@ -101,6 +101,7 @@ const NewStudent = (props) => {
 
       <header className="caseTitle">
         <p>Cases</p>
+        <p className="statusUpdate">No active cases.</p>
       </header>
     </section>
   )
@@ -117,8 +118,8 @@ const ContinuingStudent = (props) => {
             path='/ta/common-app' /> : ''}
         </div>
 
-        <h1>TA(old)</h1>
-        <NavLink className="TA-btn" to='/ta/course-planner'>
+        <h1>TA</h1>
+        <NavLink className="TA-btn" to='/ta/request-ta'>
           <span>Request TA</span>
           <FontAwesomeIcon icon={angleRight} />
         </NavLink>
@@ -127,6 +128,8 @@ const ContinuingStudent = (props) => {
       <header className="caseTitle">
         <p>Cases</p>
       </header>
+
+      <StatusPage />
     </section>
   )
 }
@@ -159,7 +162,7 @@ class TaStatusPage extends React.Component {
       })
     }
     else {
-      
+
       this.setState({
         newStudent: false
       })
@@ -167,7 +170,7 @@ class TaStatusPage extends React.Component {
   }
 
   render() {
-
+    console.log('ah')
     let StudentView;
 
     if (this.state.newStudent) {
@@ -186,7 +189,7 @@ class TaStatusPage extends React.Component {
     }
 
     return (
-      <div className="overall">
+      <div>
 
         {/* <nav className="tuition-assistance-header">
           <div id="ellipsisMenu" onClick={this.taMenuClickHandler}>
@@ -206,11 +209,11 @@ class TaStatusPage extends React.Component {
         </header> */}
         {StudentView}
 
-        <Switch>
+        {/* <Switch>
           <Route path={'/ta/status/new-student'} component={TaStatusNewStudent}></Route>
           <Route path={'/ta/status/continuing-student'} component={TaStatusContinuingStudent}></Route>
-          {/* <Route path={`/ta/common-app`} component={CommonApp}></Route> */}
-        </Switch>
+          <Route path={`/ta/common-app`} component={CommonApp}></Route>
+        </Switch> */}
 
       </div>
     )

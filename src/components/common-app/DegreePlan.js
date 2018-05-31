@@ -33,7 +33,7 @@ const TaMenu = () => (
   </div>
 )
 
-class Homeschool extends React.Component {
+class DegreePlan extends React.Component {
   constructor() {
     super()
 
@@ -67,35 +67,35 @@ class Homeschool extends React.Component {
         <article className="commonFields">
 
           <section className="commonAppFieldWrapper noFloat">
-            <select>
-              <option>Option #1</option>
-              <option>Option #2</option>
-            </select>
             <label>SchoolID</label>
-          </section>
-
-          <section className="commonAppFieldWrapper noFloat">
             <select>
               <option>Option #1</option>
               <option>Option #2</option>
             </select>
+          </section>
+
+          <section className="commonAppFieldWrapper noFloat">
             <label>Degree Level</label>
-          </section>
-
-          <section className="commonAppFieldWrapper noFloat">
             <select>
               <option>Option #1</option>
               <option>Option #2</option>
             </select>
+          </section>
+
+          <section className="commonAppFieldWrapper noFloat">
             <label>Degree Type</label>
-          </section>
-
-          <section className="commonAppFieldWrapper noFloat">
             <select>
               <option>Option #1</option>
               <option>Option #2</option>
             </select>
+          </section>
+
+          <section className="commonAppFieldWrapper noFloat">
             <label>Degree Plan</label>
+            <select>
+              <option>Option #1</option>
+              <option>Option #2</option>
+            </select>
           </section>
 
           <section className="commonAppFieldWrapper noFloat">
@@ -115,4 +115,4 @@ class Homeschool extends React.Component {
   }
 }
 
-export default hot(module)(Homeschool)
+export default hot(module)(DegreePlan)
