@@ -23,7 +23,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "./dist/"),
-    filename: 'bundle.js'
+    filename: 'gae-mobile/bundle.js'
   },
   module: {
     loaders: [{
@@ -87,7 +87,8 @@ module.exports = {
       'process.env.NODE_ENV': '"development"',
     }),
     new HtmlWebpackPlugin({
-      template : 'src/index.html'
+      template : 'src/index.html',
+      favicon: 'src/assets/favicon.ico'
     }),
     new CopyWebpackPlugin([{
       from: 'src/assets',
