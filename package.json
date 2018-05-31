@@ -52,6 +52,7 @@
     "babel": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "cesium": "^1.45.0",
+    "clean-webpack-plugin": "^0.1.19",
     "gh-pages": "^1.1.0",
     "webpack-dev-server": "^2.11.2"
   }

@@ -4,6 +4,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+
+// the path(s) that should be cleaned
+let pathsToClean = [
+  'dist'
+]
 
 module.exports = {
   entry: path.resolve(__dirname, "src/index.js"),
@@ -83,6 +89,7 @@ module.exports = {
     }]
   },
   plugins: [
+    new CleanWebpackPlugin(pathsToClean, {}),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"development"',
     }),
