@@ -8,18 +8,18 @@ import '../scss/stylesheet.scss'
 import 'normalize.css'
 
 const App = () => (
-  <BrowserRouter>
+  <HashRouter>
     <div className="overall">
       <Header />
 
-      <Switch>
+    
         <Route path="/ta" component={TuitionAssistance}></Route>
         <Route exact path="/more" component={Hamburger} />
-      </Switch>
+      
 
       <Footer />
     </div>
-  </BrowserRouter>
+  </HashRouter>
 )
 
 export default App
